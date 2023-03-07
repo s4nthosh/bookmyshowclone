@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/theater.css' %}">
+</head>
+<body>
+    {% for j in sa %}
+    <header>
+        <img class="h-img" src="{{j.img.url}}"width='50px' height="50px">
+        <h3>{{ j.name }}</h3>
+        <h5>{{ j.Description }}</h5>
+    </header>
+    {% endfor %}
+    {% for i in bk %}
+    <div class="b-con">
+        <div class="c-con">
+            <div class="t-con">
+                <h1>{{ i.theater_name}}</h1>
+                
+                <div class="tim-con">
+                    {% for k in time %}
+                    {% if i.theater_name is k.theater_name %}
+                    <a href="{% url 'booking' k.movie k.theater_name k.time %}">{{k.time}}</a>{% endif %}
+                {% endfor %}    
+                </div>
+            </div>
+            
+        </div>
+        {% endfor %}
+    </div>
+
+
+</body>
+</html>

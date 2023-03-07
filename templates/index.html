@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+  <div class="home">
+    <header>
+      <nav>
+          <ul>
+              <li><a href="#"><span class="material-symbols-outlined">
+                home
+                </span></a></li>
+              <li><a href="#"><span class="material-symbols-outlined">
+                slideshow
+                </span></a></li>
+              <li><a href="#"><span class="material-symbols-outlined">
+                play_circle
+                </span></a></li>
+              <li><a href="#"><span class="material-symbols-outlined">
+                local_activity
+                </span></a></li>
+          </ul>
+      </nav>
+      <div class="searchbar">
+        <input type="search" placeholder="search for movies"><span class="material-symbols-outlined">
+          search
+          </span>
+      </div>
+  </header>
+    <div class="ad-con">
+      <div class="s">
+      <div class="slides">
+        <!--radio buttons start-->
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <!--radio buttons end-->
+        {% for i in banner %}
+        <!--slide images start-->
+        <div class="slide first">
+          <a href=""><img src="{{ i.banner_1.url }}"width='100%' height="100%" alt="broken"></a>
+        </div>
+        
+        <div class="slide">
+          <a href=""><img src="{{ i.banner_2.url }}"width='100%' height="100%" alt=""></a>
+        </div>
+        <div class="slide">
+          <a href=""><img src="{{ i.banner_3.url }}"width='100%' height="100%" alt=""></a>
+        </div>
+        <div class="slide">
+          <a href=""><img src="{{ i.banner_4.url }}"width='100%' height="100%" alt=""></a>
+        </div>
+        {% endfor %}
+        <!--automatic navigation start-->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+    </div>
+            <!--slide images end-->
+        
+        <!--manual navigation start-->
+    <div class="navigation-manual"> 
+      <label for="radio1" class="manual-btn"></label>
+      <label for="radio2" class="manual-btn"></label>
+      <label for="radio3" class="manual-btn"></label>
+      <label for="radio4" class="manual-btn"></label>
+    </div>
+    <!--manual navigation end-->
+  </div>
+    </div>
+  </div>
+    <div class="recommended">
+      <h3>Recommended movies</h3>
+      <div class="con">
+        {% for rec in rec %}
+      <div class="movies">
+        <a href="{% url 'nxt' rec.name %}"><div class="m1">
+          <div class="h">
+          <img src="{{ rec.img.url }}"width='100%' height="100%">
+        </div>
+          <h3>{{ rec.name }}</h3>
+          <h4>{{ rec.Description}}</h4>
+        </div></a>
+      </div>
+      {% endfor %}
+    </div>
+      </div>
+
+      <div class="banner">
+        <div class="show-con">
+          <img src="/book-slot/asserts/banner.png"width='100%' height="100%">
+        </div>
+        </div>
+
+      <div class="premier">
+        <h3>Premier movies</h3>
+        <div class="con">
+          {% for rec_p in rec_p %}
+        <div class="movies">
+          <a href="{% url 'nxt' rec_p.name %}"><div class="m1">
+            <div class="h">
+            <img src="{{ rec_p.img.url }}"width='100%' height="100%">
+          </div>
+            <h3>{{ rec_p.name }}</h3>
+            <h4>{{ rec_p.Description}}</h4>
+          </div></a>
+        </div>
+        {% endfor %}
+      </div>
+      </div>
+
+
+
+      
+  
+
+  <script type="text/javascript">
+    var counter = 1;
+    setInterval(function(){
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if(counter > 4){
+        counter = 1;
+      }
+    }, 5000);
+    </script>
+</body>
+</html>

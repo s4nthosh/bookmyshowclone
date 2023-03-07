@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #1A1B1F;
+}
+.Home{
+    width: 100%;
+    height: 100vh;
+    background-color: #1A1B1F;
+}
+header{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    text-transform: capitalize;
+    cursor: default;
+}
+.p{
+    display: none;
+}
+.c-count{
+    background-color: antiquewhite;
+    text-decoration: none;
+    padding: 5px;
+    margin: 0 100px;
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0.623);
+    border-radius: 5px;
+}
+.c-count a{
+    text-decoration: none;
+    color: black;
+}
+.pay{
+    background-color: red;
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0.623);
+    border-radius: 5px;
+}
+.pay a{
+    padding: 5px 50px;
+    text-decoration: none;
+    color: black;
+}
+.s-con{
+    width: 100%;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: end;
+}
+#box1{
+    margin: 0 50px;
+}
+.name{
+    padding: 0 10px;
+    font-size: 10px;
+}
+.seats{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    align-content: center;
+}
+.block{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    text-transform: capitalize;
+} 
+.seatI{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.seat{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid green;
+    color: green;
+    cursor: default;
+    margin: 0 3px;
+    text-transform: capitalize;
+    background-color: rgba(240, 248, 255, 0.801);
+}
+select{
+    display: none;
+}
+
+
+.SeatRow1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.seat.selected{
+    background-color: green;
+    color: white;
+}
+.seat.occupied{
+    background-color: rgb(56, 55, 55);
+}
+.seat:not(.occupied):hover{
+    background-color: green;
+    color: white;
+}
+
+tr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding:10px;
+}
+
+
+
+
+
