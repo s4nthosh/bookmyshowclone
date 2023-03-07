@@ -78,10 +78,8 @@ WSGI_APPLICATION = 'booking.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME':'booking',
-        'USER' :'root',
-        'PASSWORD':''
+        'ENGINE': 'django.db.backends.db.sqlite3',
+        'NAME':BASE_DIR/'db.sqlite3',
     }
 }
 
