@@ -231,3 +231,16 @@ body{
     text-align: center;
     opacity: 0.7;
 }
+
+@media screen 
+and (min-width: 1030px)
+and (max-width: 1366px) {
+
+    .multi-mov{
+        width: 200px;
+        display: flex;
+        border-radius: 16px;
+        flex-direction: column;
+    }   
+
+}
