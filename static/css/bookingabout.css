@@ -244,3 +244,53 @@ and (max-width: 1366px) {
     }   
 
 }
+@media only screen and (max-width: 480px){
+    .movietk-page{
+        background-color: #1A1B1F;       
+    }
+        .multi-mov{
+            width: 200px;
+            height:250px;
+            margin:0 100px;
+       }
+       .multi{
+        display: flex;
+        padding: 50px 0px;
+        flex-direction:column;
+        z-index: 11;
+    }
+    
+    .bg{
+        display:none;
+    }
+    .title-con{
+    width:100%;
+    padding:0;
+    }
+    .title-con h1{
+    font-size: 24px;
+    padding:10px;
+}
+.title-con h3{
+    font-size: 14px;
+    padding:0px 20px;
+}
+.title-con h6{
+    font-size: 10px;
+}
+
+.rating-con h5{
+    font-size: 13px;
+}
+.rating-con h6{
+    font-size: 10px;
+}   
+    .tkt{
+    background-color:goldenrod;
+    text-align: center;
+    padding: 10px 0px;   
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+}

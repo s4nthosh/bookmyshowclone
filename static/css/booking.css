@@ -133,6 +133,56 @@ tr{
     padding:10px;
 }
 
+@media only screen and (max-width: 480px){
+    header{
+        width:100vh;
+        justify-content: start;
+    }
+    .Home{
+        width:100%;
+        height:100vh;
+        overflow:hidden; 
+    }
+    
+    .name{
+    padding: 0 10px;
+}
+    .seats{
+        overflow:scroll;
+        justify-content: space-between;
+    
+    }
+    .b-con{
+     display:flex;
+     padding:0;
+     margin:0;
+     position:absolute;
+     flex-direction: column;   
+     align-items: start;
+     top:80px;    
+     width:100%;
+        
+    }
+    .c-count{
+    background-color: white;
+    text-decoration: none;
+    margin: 0px;
+    text-align: center;
+    border:none;   
+    }
+    .pay{
+    background-color: red;
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0.623);
+    border-radius: 5px;
+    width:100%;
+    display:flex;    
+}
+    .pay a{
+    width:40%;   
+}
+}
+
 
 
 
