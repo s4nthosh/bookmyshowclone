@@ -344,18 +344,10 @@ and (max-width: 1366px) {
     color: blueviolet;
   }
   .navigation-manual{
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 450px;
+    display:none;
   }
   .navigation-auto{
-    position: absolute;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-top: 450px;
+    display:none;
   }
   .recommended{
     margin-left: 0px;
@@ -397,6 +389,7 @@ and (max-width: 1366px) {
   .slides{
   width: 500%;
   height: 400px;
+    display:none;
 }
 .searchbar{
   padding: 80px 0px;
